@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.xml.ws.RequestWrapper;
 import java.util.List;
 
-@Controller
+@RestController
 @RequestMapping("/api")
 public class StudentController {
 
@@ -33,7 +33,6 @@ public class StudentController {
 
     @RequestMapping(value = "/students", method = RequestMethod.POST, produces = "application/json")
     @ResponseStatus(code = HttpStatus.CREATED)
-    @ResponseBody
     public Student addStudent(@RequestBody Student student) {
         return studentService.add(student);
     }

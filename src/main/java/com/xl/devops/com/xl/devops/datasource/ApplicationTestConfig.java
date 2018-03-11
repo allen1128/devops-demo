@@ -12,9 +12,10 @@ import javax.sql.DataSource;
 
 
 @Configuration
-public class ApplicationConfig {
+@Profile("test")
+public class ApplicationTestConfig {
+
     @Bean
-    @Profile("test")
     public DataSource dataSource(){
         return new EmbeddedDatabaseBuilder()
                 .setType(EmbeddedDatabaseType.H2)
