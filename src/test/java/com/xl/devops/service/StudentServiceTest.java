@@ -15,5 +15,4 @@ public class StudentServiceTest {
         Student student = studentService.createNewStudentWithStudentId(1l);
         assertTrue(student.getStudentId().equals(1l));
     }
-
 }
